@@ -1,0 +1,48 @@
+$color-1: #07161C;
+$color-2: #3D5B68;
+$color-3: #8F989B;
+$color-4: #D2D7C7;
+$color-5: #F4F4F4;
+
+html{
+	font-size:62.5%;
+}
+body{
+	font-family: 'Oswald', sans-serif;
+	color:$color-1;
+}
+main{
+	// margin-top:10px;
+}
+
+// $small-view: "(max-width: 420px)";
+// $phone: "screen and(max-width:400px)";
+// $tablet: "screen and (min-width:400px) and (max-width:800px)";
+// $pc: "screen and (min-width:800px)" ;
+
+// @mixin media($view,$color){
+// 	@media #{$view} {
+// 		background-color: $color;
+// 	}
+// }
+
+// @mixin phone{
+// 	@media #{$phone} {
+// 		@content;
+// 	}
+// }
+
+// @mixin tablet{
+// 	@media #{$tablet} {
+// 		@content;
+// 	}
+// }
+// @mixin pc{
+// 	@media #{$pc} {
+// 		@content;
+// 	}
+// }
+
+// @mixin bgcol($color){
+// 	background-color:$color;
+// }
