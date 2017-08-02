@@ -4,10 +4,10 @@ stan na dzień 2.08.2017
 
 
 ## Założenia:
-[ ] Mobile First
-[ ] FlexBox
-[ ] RWD
-[ ] SASS
-[ ] JS, HTML, CSS
-[ ] testy
-[ ] 
+- [ ] Mobile First
+- [ ] FlexBox
+- [ ] RWD
+- [ ] SASS
+- [ ] JS, HTML, CSS
+- [ ] testy
+- [ ] 
