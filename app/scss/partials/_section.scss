@@ -5,8 +5,6 @@
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-    /*background-position: 50%;*/
     position: relative;
     height: 100vh;
     width: auto;
@@ -29,7 +27,6 @@
     top: 10%;
     left: 0;
     right: 0;
-    /*transform: translateX(-50%);*/
     font-size: 2.0rem;
     text-transform: capitalize;
     letter-spacing: .5rem;
@@ -41,7 +38,6 @@
     top: 60%;
     left: 0;
     right: 0;
-    /*transform: translateX(-50%);*/
     font-size: 2.0rem;
     text-transform: capitalize;
 }
@@ -64,9 +60,10 @@
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
-    align-content:  center;
+    align-content: center;
     flex-basis: 100%;
 }
+
 
 
 /* company style */
@@ -75,6 +72,16 @@
     background-color: $color-3;
     @extend %box;
     color: $color-5;
+    position: relative;
+    border-left: 5px solid transparent;
+}
+
+.company::before {
+    content: '';
+    background-color: $color-1;
+    position: absolute;
+    top: 20px;
+    width: 45px;
 }
 
 .company__header {
@@ -88,64 +95,95 @@
 }
 
 
+
 /*  realizations style*/
 
-.realizations{
-	@extend %box;
-	background-color: $color-4;
+.realizations {
+    @extend %box;
+    background-color: $color-4;
 }
-.realizations__header{
-	@extend %box__header;
+
+.realizations__header {
+    @extend %box__header;
 }
-.realizations__list{
-	/*line-height: 2.6rem;*/
+
+.realizations__list {
+    
 }
-.realizations__list li{
-	margin-bottom:10px;
-	margin-left:-20px;
+
+.realizations__list li {
+    margin-bottom: 10px;
+    margin-left: -20px;
 }
+
+
 /* reference */
 
-.reference{
-	@extend %box;
-	/*text-align:center;*/
-	justify-content: space-around;
+.reference {
+    @extend %box;
+    /*overflow-X: hidden;*/
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-.reference__logo{
-	width:40%;
-	height: 100%;
-	margin:10px;
 
-	
+.reference__logo {
+    width: 40%;
+    height: 100%;
+    margin: 10px;
 }
-.reference__header{
-	@extend %box__header;
 
+.reference__logo2 {
+    width: 20%;
+    height: 100%;
+    margin: 10px;
 }
+
+.reference__header {
+    @extend %box__header;
+}
+
+
 /* qualifications */
+
 .qualifications {
-	@extend %box;
-	background-color: $color-4;
-	text-align: center;
+    @extend %box;
+    background-color: $color-4;
+    text-align: center;
 }
-.qualifications__headers{
-	@extend %box__header;
+
+.qualifications__headers {
+    @extend %box__header;
 }
-.qualifications__doc{
-	width: 300px;
-	text-align: center;
+
+.qualifications__doc {
+    max-width: 40%;
+    text-align: center;
+    margin: 5px;
 }
-.qualifications__doc img{
-	width: 100%;
+
+.qualifications__doc img {
+    width: 100%;
 }
-.qualifications__doc__figcaption{
-	text-align: center;
+
+.qualifications__doc__figcaption {
+    text-align: center;
 }
+
+
 /* contact */
 
-.contact{
-	@extend %box;
+.contact {
+    @extend %box;
 }
+
 .contact__header {
-	@extend %box__header;
+    @extend %box__header;
+}
+.contact__logo{
+    margin: 10px;
+    width: 50%;
+    height:100%;
+    flex-basis: 30%;
 }

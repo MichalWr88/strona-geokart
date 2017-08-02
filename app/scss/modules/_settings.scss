@@ -6,10 +6,12 @@ $color-5: #F4F4F4;
 
 html{
 	font-size:62.5%;
+
 }
 body{
 	font-family: 'Oswald', sans-serif;
 	color:$color-1;
+	position: relative;
 }
 main{
 	// margin-top:10px;

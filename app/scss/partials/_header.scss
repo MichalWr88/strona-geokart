@@ -2,34 +2,34 @@
 
 header {
     background-color: $color-5;
-    /*	display: flex;
-	justify-content: space-around;
+    display: flex;
+	justify-content: space-between;
 	flex-direction: row;
-	flex-wrap: wrap;*/
-    height: 100%;
+	flex-wrap: wrap;
+    width: 100vw;
+    position: fixed;
+    z-index:2;
+    align-content: center;
 }
 
 .header__logo {
     margin: 10px;
-    width: 120px;
+    width: 30%;
+    height:100%;
 }
 
 .header__menu__btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
     border: 1px solid $color-3;
     border-radius: 5px;
+    height: 30px;
+    margin:10px;
     font-size: 1.4rem;
 }
 
 .header__menu {
-    position: absolute;
-    right: 0;
     display: none;
+    flex-basis: 100%;
+
 
 }
 
@@ -38,7 +38,6 @@ header {
     display: block;
     padding: 4px;
     margin: 2px;
-
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
