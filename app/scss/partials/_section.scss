@@ -58,9 +58,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width:100%;
 }
 
-%box__header {
+.section__header {
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
@@ -77,9 +78,7 @@
     color: $color-5;
 }
 
-.company__header {
-    @extend %box__header;
-}
+
 
 .company__article__header {
     font-size: 2rem;
@@ -94,9 +93,7 @@
 	@extend %box;
 	background-color: $color-4;
 }
-.realizations__header{
-	@extend %box__header;
-}
+
 .realizations__list{
 	/*line-height: 2.6rem;*/
 }
@@ -118,19 +115,14 @@
 
 	
 }
-.reference__header{
-	@extend %box__header;
 
-}
 /* qualifications */
 .qualifications {
 	@extend %box;
 	background-color: $color-4;
 	text-align: center;
 }
-.qualifications__headers{
-	@extend %box__header;
-}
+
 .qualifications__doc{
 	width: 300px;
 	text-align: center;
@@ -145,7 +137,10 @@
 
 .contact{
 	@extend %box;
+
 }
-.contact__header {
-	@extend %box__header;
+
+.contact__logo{
+   width:auto;
+   height:80px;
 }
