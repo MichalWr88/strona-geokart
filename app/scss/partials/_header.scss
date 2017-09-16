@@ -2,18 +2,23 @@
 
 header {
     background-color: $color-5;
-    /*	display: flex;
-	justify-content: space-around;
+    display: flex;
+	justify-content: space-between;
 	flex-direction: row;
-	flex-wrap: wrap;*/
-    height: 100%;
+	flex-wrap: wrap;
+    width: 100vw;
+    position: fixed;
+    z-index:2;
+    align-content: center;
 }
 
 .header__logo {
     margin: 10px;
-    width: 120px;
+    width: 30%;
+    height:100%;
 }
 
+<<<<<<< HEAD
 .header__btn {
     position: absolute;
     top: 10px;
@@ -21,8 +26,13 @@ header {
     width: 30px;
     height: 30px;
     margin: 10px;
+=======
+.header__menu__btn {
+>>>>>>> origin/first-stage
     border: 1px solid $color-3;
     border-radius: 5px;
+    height: 30px;
+    margin:10px;
     font-size: 1.4rem;
 
     &:focus ~ .header__menu{
@@ -31,10 +41,13 @@ header {
 }
 
 .header__menu {
-    position: absolute;
-    right: 0;
     display: none;
+<<<<<<< HEAD
     z-index:2;
+=======
+    flex-basis: 100%;
+
+>>>>>>> origin/first-stage
 
 }
 
@@ -43,7 +56,6 @@ header {
     display: block;
     padding: 4px;
     margin: 2px;
-
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
