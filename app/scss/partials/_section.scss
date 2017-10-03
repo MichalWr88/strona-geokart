@@ -54,9 +54,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width:100%;
 }
 
-%box__header {
+.section__header {
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
@@ -84,9 +85,7 @@
     width: 45px;
 }
 
-.company__header {
-    @extend %box__header;
-}
+
 
 .company__article__header {
     font-size: 2rem;
@@ -103,12 +102,17 @@
     background-color: $color-4;
 }
 
+<<<<<<< HEAD
+.realizations__list{
+	/*line-height: 2.6rem;*/
+=======
 .realizations__header {
     @extend %box__header;
 }
 
 .realizations__list {
     
+>>>>>>> origin/first-stage
 }
 
 .realizations__list li {
@@ -140,11 +144,14 @@
     margin: 10px;
 }
 
+<<<<<<< HEAD
+=======
 .reference__header {
     @extend %box__header;
 }
 
 
+>>>>>>> origin/first-stage
 /* qualifications */
 
 .qualifications {
@@ -154,6 +161,11 @@
     position:relative:
 }
 
+<<<<<<< HEAD
+.qualifications__doc{
+	width: 300px;
+	text-align: center;
+=======
 .qualifications__headers {
     @extend %box__header;
 }
@@ -162,6 +174,7 @@
     max-width: 40%;
     text-align: center;
     margin: 5px;
+>>>>>>> origin/first-stage
 }
 
 .qualifications__doc img {
@@ -175,6 +188,16 @@
 
 /* contact */
 
+<<<<<<< HEAD
+.contact{
+	@extend %box;
+
+}
+
+.contact__logo{
+   width:auto;
+   height:80px;
+=======
 .contact {
     @extend %box;
     background-color:$color-2;
@@ -189,6 +212,7 @@
     width: 50%;
     height:100%;
     flex-basis: 30%;
+<<<<<<< HEAD
     filter:invert(1);
 }
 .contact__company{
@@ -254,3 +278,7 @@
     padding:20px 10px;
 
 }
+=======
+>>>>>>> origin/first-stage
+}
+>>>>>>> master
