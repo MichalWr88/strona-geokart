@@ -158,6 +158,7 @@
     @extend %box;
     background-color: $color-4;
     text-align: center;
+    position:relative:
 }
 
 <<<<<<< HEAD
@@ -199,6 +200,8 @@
 =======
 .contact {
     @extend %box;
+    background-color:$color-2;
+    color:$color-5;
 }
 
 .contact__header {
@@ -209,5 +212,73 @@
     width: 50%;
     height:100%;
     flex-basis: 30%;
+<<<<<<< HEAD
+    filter:invert(1);
+}
+.contact__company{
+    text-align: center;
+    line-height: 2.6rem;
+}
+.contact__address{
+    padding:10px 0;
+}
+.address__elem{
+    display: block;
+   color:$color-4;
+   margin-bottom:10px;
+   letter-spacing: 0.1rem;
+}
+.address__elem b{
+    color:$color-5;
+    margin-right:5px;
+    text-transform: uppercase;
+}
+.contact__office__header{
+    margin:0;
+    text-transform: uppercase;
+}
+.office__days{
+    list-style-type: none;
+
+}
+.office__days li{
+    margin-bottom:10px;
+}
+
+.contact__info{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding:20px;
+}
+.contact__info p{
+    flex-basis: 100%;
+}
+.contact__details{
+    border:1px solid $color-4;
+    flex-basis: 100%;
+    text-align:center;
+    padding:20px;
+}
+.contact__name{
+    margin:0;
+    margin-bottom:20px;
+}
+/* FOOTER */
+
+.footer{
+    min-height: 30px;
+    /*height: 100%;*/
+    background-color:$color-1;
+    color:$color-5;
+
+}
+.footer__info{
+    padding:20px 10px;
+
+}
+=======
 >>>>>>> origin/first-stage
 }
+>>>>>>> master
