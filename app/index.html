@@ -40,34 +40,41 @@
 </head>
 
 <body>
-    <header>
+    <header class="page__header">
         <img class="header__logo" src="images/logo.png" alt="logo firmy geokart">
-        <span class="fa fa-facebook-square header__social" aria-hidden="true"></span>
-        <button class="header__menu__btn title="otwórz menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
         <nav class="header__menu">
-                <a href="#slide" title="strona główna">home</a>
-                <a href=" ">o firmie</a>
-                <a href=" ">realizacje</a>
-                <a href=" ">referęcje</a>
-                <a href=" ">kontakt</a>
-                <a href="#">linki</a> 
+        <button class="fa fa-bars menu__btn" title=" otwórz menu " aria-hidden="true" ></button>
+            <ul class="menu__list">
+                <li class="list__elem"><a class="list__link" tabindex="0" href="#slide " title="strona główna ">home</a></li>
+                <li class="list__elem"><a class="list__link" tabindex="0" href="# ">o firmie</a></li>
+                <li class="list__elem"><a class="list__link" tabindex="0" href="# ">realizacje</a></li>
+                <li class="list__elem"><a class="list__link" tabindex="0" href="# ">referencje</a></li>
+                <li class="list__elem"><a class="list__link" tabindex="0" href="# ">kontakt</a></li>
+                <li class="list__elem"><a class="list__link" tabindex="0" href="# ">linki</a></li> 
+            </ul>
         </nav>
     </header>
     <main>
         <section class="slide " id="slide ">
-            <h1 class="slide__header">geo-kart s.c.</h1>
-            <p class="slide__info">Od ponad 15 lat zajmujemy się realizacjami prac geodezyjnych</p>
-            <p class="slide__info2">Rozpoczecie działalności 2006 r.</p>
+<div class="slide__header ">
+    <h1>geo-kart</h1>
+    <p><i class="slide__info2 "></i>s.c.</p>
+    <p>2006</p>
+</div>
+            <!-- <h1 class="slide__header ">geo-kart s.c.</h1> -->
+            <p class="slide__info ">Od ponad 15 lat zajmujemy się realizacjami prac geodezyjnych</p>
+            
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <polygon class="svg--sm" fill="#8F989B" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
-    <polygon class="svg--lg" fill="#8F989B" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+  <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 100 100 " preserveAspectRatio="none ">
+    <polygon class="svg--sm " fill="#8F989B " points="0,0 30,100 65,21 90,100 100,75 100,100 0,100 "/>
+    <polygon class="svg--lg " fill="#8F989B " points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100 " />
   </svg>
 
 
         </section>
         <section class="company " id="company ">
-            <h2 class="company__header">o firmie</h2>
+            <h2 class="company__header ">o firmie</h2>
             <article class="company__article ">
                 Jesteśmy profesjonalnym i kompetentnym zespołem geodetów posiadającym kilkunastoletnie doświadczenie w branży geodezyjnej, które zaowocowało złożeniem w 2006 roku firmy GEO-KART S.C.
                 <br> Świadczymy usługi geodezyjne dla firm budowlanych, instalacyjnych, biur projektowych, urzędów miast i gmin oraz osób prywatnych na terenie Wrocławia i okolicznych powiatów.
@@ -101,7 +108,7 @@
             <article>
                 <p>ZAUFAŁO NAM WIELE FIRM I KLIENTÓW INDYWIDUALNYCH
                     <br> potwierdza to uczestnictwo przy większych realizacjach:</p>
-                <ul class="realizations__list">
+                <ul class="realizations__list ">
                     <li>Budowa płyty postojowej dla Samolotów – Lotnisko Wrocław, Strachowice</li>
                     <li>Obsługa budowy mostów Warszawskich – Wrocław</li>
                     <li>Realizacja magistrali wodociągowej – Wrocław, Opatowice-Strachocin</li>
@@ -125,17 +132,17 @@
             </article>
         </section>
         <section class="reference " id="reference ">
-            <h2 class="reference__header">referencje</h2>
+            <h2 class="reference__header ">referencje</h2>
             <p>Firmy z którymi współpracujemy:</p>
-            <img class="reference__logo" src="images/firmy/skanska.png " alt="logo firmy skanska ">
-            <img class="reference__logo" src="images/firmy/pebud.png " alt="logo firmy pebud ">
-            <img class="reference__logo" src="images/firmy/elektrotim.png " alt="logo firmy elektrotim ">
-            <img class="reference__logo" src="images/firmy/drobud.png " alt="logo firmy drobud ">
-            <img class="reference__logo" src="images/firmy/budimex.png " alt="logo firmy budimex ">
-            <img class="reference__logo" src="images/firmy/miwro.png " alt="logo firmy miwro ">
-            <img class="reference__logo" src="images/firmy/fitting.png " alt="logo firmy fitting ">
-            <img class="reference__logo" src="images/firmy/elkom.png " alt="log firmy elkom ">
-            <img class="reference__logo2"  src="images/firmy/wg.jpg " alt="logo firmy wajergaz ">
+            <img class="reference__logo " src="images/firmy/skanska.png " alt="logo firmy skanska ">
+            <img class="reference__logo " src="images/firmy/pebud.png " alt="logo firmy pebud ">
+            <img class="reference__logo " src="images/firmy/elektrotim.png " alt="logo firmy elektrotim ">
+            <img class="reference__logo " src="images/firmy/drobud.png " alt="logo firmy drobud ">
+            <img class="reference__logo " src="images/firmy/budimex.png " alt="logo firmy budimex ">
+            <img class="reference__logo " src="images/firmy/miwro.png " alt="logo firmy miwro ">
+            <img class="reference__logo " src="images/firmy/fitting.png " alt="logo firmy fitting ">
+            <img class="reference__logo " src="images/firmy/elkom.png " alt="log firmy elkom ">
+            <img class="reference__logo2 "  src="images/firmy/wg.jpg " alt="logo firmy wajergaz ">
 
 
 
@@ -144,79 +151,86 @@
         <!-- qualifications -->
 
         <section class="qualifications " id="qualifications ">
-            <h2 class="qualifications__headers">uprawnienia</h2>
-            <figure class="qualifications__doc">
+            <h2 class="qualifications__headers ">uprawnienia</h2>
+            <figure class="qualifications__doc ">
                 <img src="images/firmy/t1.png " alt="świadectwo nadania uprawnień ">
-                <figcaption  class="qualifications__doc__figcaption">Paweł Bagiński <br>  zakres 1, 4</figcaption>
+                <figcaption  class="qualifications__doc__figcaption ">Paweł Bagiński <br>  zakres 1, 4</figcaption>
             </figure>
-            <figure class="qualifications__doc">
+            <figure class="qualifications__doc ">
                 <img src="images/firmy/t1.png " alt="świadectwo nadania uprawnień ">
-                <figcaption class="qualifications__doc__figcaption">Sławomir Gosek <br>  zakres 1</figcaption>
+                <figcaption class="qualifications__doc__figcaption ">Sławomir Gosek <br>  zakres 1</figcaption>
             </figure>
-            <figure class="qualifications__doc">
+            <figure class="qualifications__doc ">
                 <img src="images/firmy/t1.png " alt="świadectwo nadania uprawnień ">
-                <figcaption class="qualifications__doc__figcaption">Jacek Aszurkiewicz <br> zakres 1</figcaption>
+                <figcaption class="qualifications__doc__figcaption ">Jacek Aszurkiewicz <br> zakres 1</figcaption>
             </figure>
 
-            <svg class="skos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <polygon fill="#395C68" points="0,100 100,0 100,100"/>
+            <svg class="skos " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 100 100 " preserveAspectRatio="none ">
+    <polygon fill="#395C68 " points="0,100 100,0 100,100 "/>
   </svg>
         </section>
 
         <!-- CONTACT -->
 
         <section class="contact " id="contact ">
-            <h2 class="contact__header">kontakt</h2>
-            <img class="contact__logo " src="images/logo.png" alt="logo firmy geokart ">
-            <h3 class="contact__company">Usługi Geodezyjne i Kartograficzne<br/>
+            <h2 class="contact__header ">kontakt</h2>
+            <img class="contact__logo " src="images/logo.png " alt="logo firmy geokart ">
+            <h3 class="contact__company ">Usługi Geodezyjne i Kartograficzne<br/>
                         GEO-KART S.C.</h3>
-            <address class="contact__address">
-                <span class="address__elem"><b>Adres:</b>ul. Kozanowska 75/14 Wrocław</span>
-                <span class="address__elem"><b>biuro:</b>ul. Żegiestowska 11 Wrocław</span>
-                <span class="address__elem"><b>nip:</b>894-302-25-80 <b>regon:</b>021538810</span>
-                <span class="address__elem"><b>konto:</b>Alior Bank S.A. <br> 37 2490 0005 0000 4500 3180 0289</span>
+            <address class="contact__address ">
+                <span class="address__elem "><b>Adres:</b>ul. Kozanowska 75/14 Wrocław</span>
+                <span class="address__elem "><b>biuro:</b>ul. Żegiestowska 11 Wrocław</span>
+                <span class="address__elem "><b>nip:</b>894-302-25-80 <b>regon:</b>021538810</span>
+                <span class="address__elem "><b>konto:</b>Alior Bank S.A. <br> 37 2490 0005 0000 4500 3180 0289</span>
             </address>
-            <h4 class="contact__office__header">godziny otwarcia biura</h4>
-            <ul class="office__days">
+            <h4 class="contact__office__header ">godziny otwarcia biura</h4>
+            <ul class="office__days ">
                 <li>Poniedziałek - Piątek 7:00-15:00</li>
                 <li>Sobota - Niedziela <span>nieczynne</span> </li>
                 <li>&#42;Istnieje również możliwość umówienia spotkania poza godzinami otwarcia biura – po wcześniejszym uzgodnieniu terminu.</li>
             </ul>
-            <div class="contact__map">
+            <div id="map " class="contact__map "></div>
+
+<!--             <div class="contact__map ">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10025.814249287829!2d17.0381912!3d51.0816365!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6377dc126be96c76!2sGEO-KART+S.C.!5e0!3m2!1spl!2spl!4v1501489939982 " width="100% " height="auto " frameborder="0 " style="border:0 " allowfullscreen></iframe>
-            </div>
-            <div class="contact__info">
+            </div> -->
+            <div class="contact__info ">
                 <p>Zapraszamy do wsółpracy, <br>prosimy o kontakt telefoniczny bądź mailowy:</p>
-                <div class="contact__details">
-                    <p class="contact__name">mgr
+                <div class="contact__details ">
+                    <p class="contact__name ">mgr
                         <br> Paweł Bagiński</p>
-                    <div class="contact__details--hidden">
-                        <a class="details__link" href="tel:+48509429750 " title=" ">509-429-750</a><br>
-                        <a class="details__link" href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">pawel.baginski.geokart@gmail.com</a>
+                    <div class="contact__details--hidden ">
+                        <a class="details__link " href="tel:+48509429750 " title=" ">509-429-750</a><br>
+                        <a class="details__link " href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">pawel.baginski.geokart@gmail.com</a>
                     </div>
                 </div>
-                <div class="contact__details">
-                    <p class="contact__name">mgr inż.
+                <div class="contact__details ">
+                    <p class="contact__name ">mgr inż.
                         <br> Jacek Aszurkiewicz</p>
-                    <div class="contact__details--hidden">
-                        <a class="details__link" href="tel:+48509429750 " title=" ">660-614-468</a><br>
-                        <a class="details__link" href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">jacek.aszurkiewicz@gmail.com</a>
+                    <div class="contact__details--hidden ">
+                        <a class="details__link " href="tel:+48509429750 " title=" ">660-614-468</a><br>
+                        <a class="details__link " href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">jacek.aszurkiewicz@gmail.com</a>
                     </div>
                 </div>
-                <div class="contact__details">
-                    <p class="contact__name">mgr
+                <div class="contact__details ">
+                    <p class="contact__name ">mgr
                         <br> Sławomir Gosek</p>
-                    <div class="contact__details--hidden">
-                        <a class="details__link" href="tel:+48509429750 " title=" ">501-466-370</a><br>
-                        <a class="details__link" href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">slawek.gosek@gmail.com</a>
+                    <div class="contact__details--hidden ">
+                        <a class="details__link " href="tel:+48509429750 " title=" ">501-466-370</a><br>
+                        <a class="details__link " href="mailto:pawel.baginski.geokart@gmail.com%20?subject=Zapytanie_ofertowe ">slawek.gosek@gmail.com</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer__info">2017 Michał Maleszewski | All Right Reserved</div>
+    <footer class="footer ">
+        <div class="footer__info ">2017 Michał Maleszewski | All Right Reserved</div>
     </footer>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8m_PvCfAUkOQ1tb31U3A6mvT5XrCB-Ns&callback=initMap ">
+</script>
+  
+    <script src="ES6/script.js "></script>
 </body>
 
 </html>
