@@ -19,6 +19,7 @@
     text-align: center;
     font-size: 3.2rem;
     text-transform: uppercase;
+    border:5px solid $color-5;
 }
 
 .slide__info {
@@ -54,16 +55,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width:100%;
 }
 
-.section__header {
+%box__header {
     font-size: 3.2rem;
     text-transform: uppercase;
     text-align: center;
     align-content: center;
     flex-basis: 100%;
 }
+
+
 
 
 
@@ -85,7 +87,9 @@
     width: 45px;
 }
 
-
+.company__header {
+    @extend %box__header;
+}
 
 .company__article__header {
     font-size: 2rem;
@@ -102,17 +106,12 @@
     background-color: $color-4;
 }
 
-<<<<<<< HEAD
-.realizations__list{
-	/*line-height: 2.6rem;*/
-=======
 .realizations__header {
     @extend %box__header;
 }
 
 .realizations__list {
     
->>>>>>> origin/first-stage
 }
 
 .realizations__list li {
@@ -144,27 +143,20 @@
     margin: 10px;
 }
 
-<<<<<<< HEAD
-=======
 .reference__header {
     @extend %box__header;
 }
 
 
->>>>>>> origin/first-stage
 /* qualifications */
 
 .qualifications {
     @extend %box;
     background-color: $color-4;
     text-align: center;
+    position:relative;
 }
 
-<<<<<<< HEAD
-.qualifications__doc{
-	width: 300px;
-	text-align: center;
-=======
 .qualifications__headers {
     @extend %box__header;
 }
@@ -173,7 +165,6 @@
     max-width: 40%;
     text-align: center;
     margin: 5px;
->>>>>>> origin/first-stage
 }
 
 .qualifications__doc img {
@@ -187,18 +178,10 @@
 
 /* contact */
 
-<<<<<<< HEAD
-.contact{
-	@extend %box;
-
-}
-
-.contact__logo{
-   width:auto;
-   height:80px;
-=======
 .contact {
     @extend %box;
+    background-color:$color-2;
+    color:$color-5;
 }
 
 .contact__header {
@@ -209,5 +192,73 @@
     width: 50%;
     height:100%;
     flex-basis: 30%;
->>>>>>> origin/first-stage
+    filter:invert(1);
+}
+.contact__company{
+    text-align: center;
+    line-height: 2.6rem;
+}
+.contact__map{
+    width:100%;
+    height:200px;
+    border-radius:20px;
+}
+.contact__address{
+    padding:10px 0;
+}
+.address__elem{
+    display: block;
+   color:$color-4;
+   margin-bottom:10px;
+   letter-spacing: 0.1rem;
+}
+.address__elem b{
+    color:$color-5;
+    margin-right:5px;
+    text-transform: uppercase;
+}
+.contact__office__header{
+    margin:0;
+    text-transform: uppercase;
+}
+.office__days{
+    list-style-type: none;
+
+}
+.office__days li{
+    margin-bottom:10px;
+}
+
+.contact__info{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding:20px;
+}
+.contact__info p{
+    flex-basis: 100%;
+}
+.contact__details{
+    border:1px solid $color-4;
+    flex-basis: 100%;
+    text-align:center;
+    padding:20px;
+}
+.contact__name{
+    margin:0;
+    margin-bottom:20px;
+}
+/* FOOTER */
+
+.footer{
+    min-height: 30px;
+    /*height: 100%;*/
+    background-color:$color-1;
+    color:$color-5;
+
+}
+.footer__info{
+    padding:20px 10px;
+
 }

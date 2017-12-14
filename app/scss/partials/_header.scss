@@ -1,66 +1,150 @@
 /* HEADER STYLE */
 
-header {
+.page__header {
     background-color: $color-5;
     display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100vw;
+    height: 50px;
     position: fixed;
-    z-index:2;
+    z-index: 2;
     align-content: center;
 }
 
 .header__logo {
     margin: 10px;
-    width: 30%;
-    height:100%;
+    width: auto;
+    height: 70%;
+}
+.header__menu {
+    position: absolute;
+    top: 50px;
+    display: block;
+    width: 100vw; 
+    height:0px;
 }
 
-<<<<<<< HEAD
-.header__btn {
+.menu__btn {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-=======
-.header__menu__btn {
->>>>>>> origin/first-stage
-    border: 1px solid $color-3;
-    border-radius: 5px;
-    height: 30px;
-    margin:10px;
-    font-size: 1.4rem;
+    top: -60px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    height: 40px;
+    margin: 15px;
+    font-size: 2.9rem;
 
-    &:focus ~ .header__menu{
-        display:block;
+    &:focus ~ .menu__list{
+        transform: translateX(0vw);
     }
 }
 
-.header__menu {
-    display: none;
-<<<<<<< HEAD
-    z-index:2;
-=======
-    flex-basis: 100%;
-
->>>>>>> origin/first-stage
-
+.menu__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $color-1;
+        z-index: -1;
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+    transition: 0.5s;
+    transform: translateX(100vw);
 }
 
-.header__menu a {
-    background-color: $color-4;
-    display: block;
-    padding: 4px;
-    margin: 2px;
+.list__elem {
+    display: flex;
+    justify-content: center;
+}
+
+.list__link {
+    background-color: $color-5;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid $color-2;
-    border-radius: 5px;
-    width: 150px;
+    border: none;
+    color: $color-1;
+    cursor: pointer;
+    width: 90%;
+    display: inline-block;
+    font-size: 2.5rem;
+    line-height: 1em;
+    margin: 15px 10px;
+    outline: none;
+    padding: 12px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        border-color: transparent;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+        border-style: solid;
+        border-width: 0;
+        content: "";
+        height: 24px;
+        position: absolute;
+        width: 34px;
+    }
+    &:focus:before,
+    &.focus:before,
+    &:focus:after,
+    &.focus:after {
+        height: 100%;
+        width: 100%;
+    }
+    &:hover:before,
+    &.hover:before,
+    &:hover:after,
+    &.hover:after {
+        height: 100%;
+        width: 100%;
+    }
 }
 
+
+.list__link:before {
+    border-color: $color-5;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    left: -5px;
+    top: -5px;
+}
+
+.list__link:after {
+    border-bottom-width: 2px;
+    border-color: $color-5;
+    border-right-width: 2px;
+    bottom: -5px;
+    right: -5px;
+}
+
+// .list__link:hover,
+// .list__link.hover {
+//     background-color: $color-5;
+// }
+// .list__link:focus {
+//     background-color: $color-5;
+// }
+@keyframes slideR {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0vw);
+    }
+}
