@@ -1,0 +1,48 @@
+/* REFERENCE */
+
+.reference {
+    @extend %box;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../images/bg1.jpeg');
+        background-size: cover;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        filter: brightness(50%) opacity(40%);
+    }
+}
+.reference__info{
+    width:100%;
+    background-color:$color-3;
+    color:$color-5;
+    padding:5px;
+    font-size:2rem;
+    text-transform:uppercase;
+    text-align:center;
+}
+.reference__logo {
+    width: 40%;
+    height: 100%;
+    margin: 10px;
+}
+
+.reference__logo2 {
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+}
+
+.reference__header {
+    @extend %box__header;
+}
