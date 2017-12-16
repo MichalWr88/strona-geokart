@@ -25,7 +25,7 @@
 }
 .reference__info{
     width:100%;
-    background-color:$color-3;
+    background-color:$color-2;
     color:$color-5;
     padding:5px;
     font-size:2rem;
@@ -39,6 +39,12 @@
         @include media('>=tablet') {
     width: 20%;
     height: 100%;
+  }
+  &-small{
+            @include media('>=tablet') {
+    
+    width: 10%;
+  }
   }
 
 }

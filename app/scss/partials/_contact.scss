@@ -4,24 +4,32 @@
     @extend %box;
     background-color: $color-2;
     color: $color-5;
+    justify-content:space-around;
 }
 
 .contact__header {
     @extend %box__header;
 }
 
+.contact__container{
+    max-width:300px;
+    padding:10px;
+    @include media('>=tablet') {
+        max-width:500px;
+  }
+}
 .contact__company {
     text-align: center;
     line-height: 2.6rem;
     width: 100%;
 }
-
 .contact__map {
-    width: 100%;
-    height: 200px;
+    height:200px;
+    min-width: 300px;
+    max-width:100%;
     border-radius: 20px;
 @include media('>=tablet') {
-    max-width: 500px;
+    width: 500px;
     height: 500px;
     margin:10px;
   }

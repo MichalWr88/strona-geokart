@@ -1,13 +1,13 @@
-$color-1: #07161C;
-$color-2: #3D5B68;
-$color-3: #8F989B;
-$color-4: #D2D7C7;
+$color-1: #181D26;
+$color-2: #595956;
+$color-3: #A5A6A1;
+$color-4: #BFBFBF;
 $color-5: #F4F4F4;
 
 html{
 	font-size:62.5%;
     @include media('>=desktop') {
-font-size:80%;
+font-size:70%;
   }
 
 }
@@ -21,7 +21,7 @@ main{
 }
 
 %box {
-    padding: 10px;
+    padding:10px;
     font-size: 1.5rem;
     text-align: justify;
     line-height: 2rem;
@@ -30,6 +30,10 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
+    @include media('>=tablet') {
+    padding:10px 50px;
+  }
 }
 
 %box__header {
