@@ -12,6 +12,11 @@
     z-index: 2;
     align-content: center;
     top: 0;
+@include media('>=desktop') {
+    background-color: $color-4;
+    height:80px;
+   
+  }
 }
 
 .header__logo {
@@ -26,6 +31,13 @@
     display: block;
     width: 100vw;
     height: 0px;
+    @include media('>=desktop') {
+    position:relative;
+    width:auto;
+    height:100%;
+    top:0;
+    padding-right:30px;
+  }
 }
 
 .menu__btn {
@@ -41,9 +53,13 @@
     &:focus~.menu__list {
         transform: translateX(0vw);
     }
+@include media('>=desktop') {
+    display:none;
+  }
 }
 
 .menu__list {
+    position:relative;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -59,9 +75,19 @@
         z-index: -1;
         opacity: 0.5;
         transition: 0.5s;
+    @include media('>=desktop') {
+    background-color: transparent;
+  }
     }
     transition: 0.5s;
     transform: translateX(100vw);
+    @include media('>=desktop') {
+    transform: translateX(0vw);
+    // position:relative;
+    display:flex;
+    align-items:center;
+    height:100%;
+  }
 
     .list__elem {
         display: flex;
@@ -87,6 +113,10 @@
         text-transform: uppercase;
         font-weight: 900;
         box-sizing: border-box;
+
+    @include media('>=desktop') {
+font-size:1.9rem;
+  }
 
         &:before,
         &:after {
@@ -134,20 +164,3 @@
     }
 }
 
-
-// .list__link:hover,
-// .list__link.hover {
-//     background-color: $color-5;
-// }
-// .list__link:focus {
-//     background-color: $color-5;
-// }
-@keyframes slideR {
-    from {
-        transform: translateX(100vw);
-    }
-
-    to {
-        transform: translateX(0vw);
-    }
-}

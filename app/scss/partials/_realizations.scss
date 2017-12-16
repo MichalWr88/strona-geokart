@@ -25,7 +25,11 @@ font-size:1.5rem;
 font-size:1.8rem;
 font-weight:600;
 color:$color-2;
-
+    @include media('>=desktop') {
+    column-count:2;
+    column-gap:90px;
+   
+  }
     
 .list__elem {
     margin-bottom: 10px;

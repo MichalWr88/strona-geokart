@@ -13,6 +13,10 @@
     height: 100vh;
     width: auto;
     color: $color-5;
+@include media('>=tablet') {
+background-image: url('../images/1bg.jpg');
+background-position:50% 50%;
+  }
 }
 
 .start__container {

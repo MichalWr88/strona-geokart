@@ -6,6 +6,7 @@
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    align-items:center;
 
     &::after {
         content: '';
@@ -35,6 +36,11 @@
     width: 40%;
     height: 100%;
     margin: 10px;
+        @include media('>=tablet') {
+    width: 20%;
+    height: 100%;
+  }
+
 }
 
 .reference__logo2 {

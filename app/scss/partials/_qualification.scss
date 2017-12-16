@@ -1,0 +1,126 @@
+/* qualifications */
+
+.qualifications {
+    @extend %box;
+    background-color: $color-4;
+    text-align: center;
+    position:relative;
+    padding-bottom:50px;
+     @include media('>=desktop') {
+     padding-bottom:150px;
+  }
+}
+
+.qualifications__headers {
+    @extend %box__header;
+}
+
+.qualifications__info {
+   width:100%;
+    text-align: center;
+    font-weight:600;
+    padding:5px;
+    box-sizing:border-box;
+    margin:0;
+}
+
+
+
+.snip1573 {
+  display: inline-block;
+  margin: 10px 7px;
+  max-width: 315px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  flex:0;
+  background-color:$color-1;
+  color:$color-5;
+  font-size:1.8rem;
+  font-weight:600;
+}
+
+.snip1573 * {
+  box-sizing: border-box;
+  padding:0;
+  transition: all 0.35s ease;
+}
+
+.snip1573:before,
+.snip1573:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.35s ease;
+  background-color: #000000;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+  z-index: 1;
+}
+
+.snip1573:before {
+  transform: skew(45deg) translateX(-155%);
+}
+
+.snip1573:after {
+  transform: skew(45deg) translateX(155%);
+}
+
+.snip1573 p {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1573 figcaption {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+
+  box-shadow: 0 0 10px #000000;
+}
+
+.snip1573 h3 {
+  background-color: #000000;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.snip1573 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.snip1573:hover:before{
+  -webkit-transform: skew(45deg) translateX(-55%);
+  transform: skew(45deg) translateX(-55%);
+}
+
+.snip1573:hover:after{
+  -webkit-transform: skew(45deg) translateX(55%);
+  transform: skew(45deg) translateX(55%);
+}
+
+.snip1573:hover figcaption{
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}

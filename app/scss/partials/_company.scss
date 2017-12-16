@@ -40,6 +40,11 @@
 
 .article__list {
     text-indent: 0;
+    @include media('>=desktop') {
+    column-count:2;
+    column-gap:90px;
+   
+  }
     .list__elem {
         letter-spacing: 1px;
     }

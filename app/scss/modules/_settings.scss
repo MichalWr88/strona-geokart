@@ -6,6 +6,9 @@ $color-5: #F4F4F4;
 
 html{
 	font-size:62.5%;
+    @include media('>=desktop') {
+font-size:80%;
+  }
 
 }
 body{

@@ -1,8 +1,11 @@
    @import 'vendor/modernize';
+   @import 'modules/mediaquery';
    @import 'modules/settings';
    @import 'partials/header';
    @import 'partials/start';
    @import 'partials/company';
    @import 'partials/realizations';
    @import 'partials/reference';
-   @import 'partials/section';
+   @import 'partials/qualification';
+   @import 'partials/contact';
+   @import 'partials/footer';
