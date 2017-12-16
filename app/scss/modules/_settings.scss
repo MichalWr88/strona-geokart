@@ -14,37 +14,25 @@ body{
 	position: relative;
 }
 main{
-	// margin-top:10px;
+	margin-top:50px;
 }
 
-// $small-view: "(max-width: 420px)";
-// $phone: "screen and(max-width:400px)";
-// $tablet: "screen and (min-width:400px) and (max-width:800px)";
-// $pc: "screen and (min-width:800px)" ;
+%box {
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-// @mixin media($view,$color){
-// 	@media #{$view} {
-// 		background-color: $color;
-// 	}
-// }
-
-// @mixin phone{
-// 	@media #{$phone} {
-// 		@content;
-// 	}
-// }
-
-// @mixin tablet{
-// 	@media #{$tablet} {
-// 		@content;
-// 	}
-// }
-// @mixin pc{
-// 	@media #{$pc} {
-// 		@content;
-// 	}
-// }
-
-// @mixin bgcol($color){
-// 	background-color:$color;
-// }
+%box__header {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    align-content: center;
+    flex-basis: 100%;
+}
