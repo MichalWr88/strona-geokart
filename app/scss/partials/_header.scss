@@ -48,8 +48,9 @@
     background-color: transparent;
     height: 40px;
     margin: 15px;
-    font-size: 2.9rem;
-
+    font-size: 2.5rem;
+    transition: 0.5s;
+    
     &:focus~.menu__list {
         transform: translateX(0vw);
     }

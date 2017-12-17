@@ -1,7 +1,7 @@
 console.log('test');
 function initMap() {
     const cord = { lat: 51.081646, lng: 17.038184 };
-
+    
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: cord,

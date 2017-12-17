@@ -82,7 +82,7 @@ function logFileHelpers() {
 gulp.task('babel', () => {
     gulp.src(config.jsin)
         .pipe(babel({
-            presets: ['env'],
+            presets: ['es2015']
         }))
         .pipe(gulp.dest(config.js5out))
         .pipe(logFileHelpers())
