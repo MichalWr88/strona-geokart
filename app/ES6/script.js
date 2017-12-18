@@ -1,11 +1,17 @@
 const loader = document.querySelector('.loader__wrapper');
     loader.classList.add('js');
 
-window.addEventListener('load', function(){
+window.addEventListener('load', ()=>{
 
-loader.classList.remove('js');
-   
+loader.classList.add('scale-out-center');
 
+//    const loadertime = setTimeout(()=>{
+
+// loader.classList.add('js');
+
+//    }, 200);
+
+// clearTimeout(loaderTime);
 
 },false);
 

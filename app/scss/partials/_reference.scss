@@ -41,6 +41,7 @@
     height: 100%;
   }
   &-small{
+    width: 30%;
             @include media('>=tablet') {
     
     width: 10%;
