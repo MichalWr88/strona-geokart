@@ -1,6 +1,6 @@
 const gulp = require('gulp'),
 browserSync = require('browser-sync'),
-
+webpack = require('webpack'),
 sass = require('gulp-sass'),
 sourcemaps = require('gulp-sourcemaps'),
 autoprefixer = require('gulp-autoprefixer'),
@@ -13,7 +13,7 @@ htmlReplace = require('gulp-html-replace'),
 htmlMin = require('gulp-htmlmin'),
 del = require('del'),
 sequence = require('run-sequence'),
-
+pump = require('pump'),
 babel = require('gulp-babel'),
 through = require('through2');
 
@@ -21,20 +21,23 @@ through = require('through2');
 const config = {
     dist: 'dist/',
     app: 'app/',
+    fontsin:'app/fonts/**',
+    fontsout:'dist/fonts/',
     cssin: 'app/css/**/*.css',
     jsin: 'app/ES6/**/*.js',
-    imgin: 'app/images/**/*.{jpg,jpeg,png,gif,svg}',
+    imgin: 'app/images/**/*',
     htmlin: 'app/*.html',
     scssin: 'app/scss/**/*.scss',
     cssout: 'dist/css/',
-    js5out: 'app/js',
+    js5out: 'app/js/',
+    js5in: 'app/js/**/*.js',
     jsout: 'dist/js/',
-    imgout: 'dist/img/',
+    imgout: 'dist/images/',
     htmlout: 'dist/',
     scssout: 'app/css/',
-    cssoutname: 'style-min.css',
+    cssoutname: 'main-min.css',
     jsoutname: 'script-min.js',
-    cssreplaceout: 'css/style-min.css',
+    cssreplaceout: 'css/main-min.css',
     jsreplaceout: 'js/script-min.js'
 };
 
@@ -43,7 +46,7 @@ gulp.task('reload', () => {
     browserSync.reload();
 });
 
-gulp.task('serve', ['sass'], () => {
+gulp.task('serve', ['sass','babel'], () => {
     browserSync({
         server: config.app
     })
@@ -81,13 +84,61 @@ function logFileHelpers() {
 
 gulp.task('babel', () => {
     gulp.src(config.jsin)
+        .pipe(sourcemaps.init())
         .pipe(babel({
-            presets: ['es2015']
+            presets: ['env']
         }))
+        .pipe(sourcemaps.write()) /*gulp sourcemap*/
         .pipe(gulp.dest(config.js5out))
         .pipe(logFileHelpers())
         .pipe(browserSync.stream());
 });
+
+
+
+gulp.task('webpack', function(done) {
+  // run webpack
+  webpack({
+    entry: './app/ES6/script.js',
+    output: {
+      path: __dirname + '/app/js',
+      filename: 'script.js'
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.js?$/,
+          loader: 'babel',
+          exclude: /node_modules/
+        }
+      ]
+    }
+  }, function(error) {
+    var pluginError;
+
+    if (error) {
+      pluginError = new gulpUtil.PluginError('webpack', error);
+
+      if (done) {
+        done(pluginError);
+      } else {
+        gulpUtil.log('[webpack]', pluginError);
+      }
+
+      return;
+    }
+
+    if (done) {
+      done();
+    }
+  });
+});
+
+
+
+
+
+
 
 
 // FOLDER DIST
@@ -101,9 +152,7 @@ gulp.task('html', function() {
             'js': config.jsreplaceout
         }))
         .pipe(htmlMin({
-            sortAttributes: true,
-            sortClassName: true,
-            // collapseWhitespace: true
+            collapseWhitespace: true
         }))
         .pipe(gulp.dest(config.dist))
 });
@@ -118,7 +167,7 @@ gulp.task('css', function() {
 
 // minifikacja JS--------------------------------------
 gulp.task('js', function() {
-    return gulp.src(config.js5out)
+    return gulp.src(config.js5in)
         .pipe(concat(config.jsoutname)) 
         .pipe(uglify())
         .pipe(gulp.dest(config.jsout));
@@ -133,7 +182,11 @@ gulp.task('img', function() {
     .pipe(gulp.dest(config.imgout));
 });
 
-
+// run fonts ---------------------------
+gulp.task('fonts', function() {
+  return gulp.src(config.fontsin)
+    .pipe(gulp.dest(config.fontsout));
+});
 
 
 // run delete ---------------------------
@@ -144,7 +197,7 @@ gulp.task('clean', ()=> {
 // run sequence---------------------------
 
 gulp.task('build', ()=> {
-    sequence('clean', ['css', 'js', 'html']);
+    sequence('clean', ['fonts', 'img','css', 'js','html']);
 });
 
 

@@ -1,8 +1,19 @@
-console.log('test');
+const loader = document.querySelector('.loader__wrapper');
+    loader.classList.add('js');
+
+window.addEventListener('load', function(){
+
+loader.classList.remove('js');
+   
+
+
+},false);
+
+
 function initMap() {
     const cord = { lat: 51.081646, lng: 17.038184 };
     
-    var map = new google.maps.Map(document.getElementById('map'), {
+    const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: cord,
         title: 'Wrocław',
