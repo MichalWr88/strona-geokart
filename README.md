@@ -1,13 +1,11 @@
-# strona-geokart
-stan na dzień 2.08.2017
-## strona tworzona dla firmy Geo-Kart S.C
+# strona tworzona dla firmy Geo-Kart S.C
+The website written in practice racquets and help the company in which I work, also dealt with issues related to SEO and the promotion of the company in social media.
+## [ONLINE](http://geo-kart.org.pl/)
 
 
-## Założenia:
-- [ ] Mobile First
-- [ ] FlexBox
-- [ ] RWD
-- [ ] SASS
-- [ ] JS, HTML, CSS
-- [ ] testy
-- [ ] 
+## assumptions:
+- [x] Mobile First
+- [x] FlexBox
+- [x] RWD
+- [x] SASS
+- [x] JS(ES6), HTML, CSS
