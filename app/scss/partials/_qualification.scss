@@ -5,7 +5,7 @@
     background-color: $color-4;
     text-align: center;
     position:relative;
-    padding-bottom:50px;
+    padding-bottom:100px;
      @include media('>=desktop') {
      padding-bottom:150px;
   }

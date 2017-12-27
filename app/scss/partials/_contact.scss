@@ -12,11 +12,15 @@
 }
 
 .contact__container{
-    max-width:300px;
-    padding:10px;
-    @include media('>=tablet') {
-        max-width:500px;
-  }
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+  //   max-width:300px;
+  //   padding:10px;
+  //   @include media('>=tablet') {
+  //       max-width:100%;
+  // }
 }
 .contact__company {
     text-align: center;
@@ -37,7 +41,7 @@
 
 .contact__address {
     padding: 10px 0;
-    width: 100%;
+    // width: 100%;
 }
 
 .address__elem {
@@ -56,10 +60,13 @@
 .contact__office__header {
     margin: 0;
     text-transform: uppercase;
+    flex:1;
+    height:auto;
 }
 
 .office__days {
     list-style-type: none;
+    max-width:300px;
 }
 
 .office__days li {
@@ -69,7 +76,7 @@
 .contact__info {
     display: flex;
     justify-content: space-around;
-    width: 100vw;
+    width: 100%;
     flex-wrap: wrap;
     padding: 20px;
 }
@@ -125,4 +132,9 @@ text-align:center;
     color:$color-4;
     font-size:1.9rem;
     padding:5px;
+}
+
+/* FACEBOOK */
+.fb-page{
+margin:10px;
 }

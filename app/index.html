@@ -15,12 +15,6 @@
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,600" rel="stylesheet">
-    <link href="images/favicon.ico" rel="shortcut icon" type="image/ico">
-    <!-- build:css -->
-    <link href="css/main.css" rel="stylesheet">
-    <!-- endbuild -->
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -37,11 +31,27 @@
     ga('create', 'UA-92052176-1', 'auto');
     ga('send', 'pageview');
     </script>
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,600" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/ico">
+    <!-- build:css -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- endbuild -->
 </head>
 
 <body>
+    <div id="fb-root"></div>
     <div class="loader__wrapper">
-
         <div class="loader">
        <span class="icon-spin4"></span> 
             <p>trwa ładowanie strony...</p>
@@ -185,23 +195,27 @@
         </section>
         <!-- CONTACT -->
         <section class="contact" id="contact">
-            <div class="contact__container">
                 <h2 class="contact__header ">kontakt</h2>
+            <div class="contact__container">
                 <h3 class="contact__company ">Usługi Geodezyjne i Kartograficzne GEO-KART S.C.</h3>
+
                 <address class="contact__address">
                     <span class="address__elem "><b>Adres:</b>ul. Kozanowska 75/14 Wrocław</span>
                     <span class="address__elem "><b>biuro:</b>ul. Żegiestowska 11 Wrocław</span>
                     <span class="address__elem "><b>nip:</b>894-302-25-80 <b>regon:</b>021538810</span>
                     <span class="address__elem "><b>konto:</b>Alior Bank S.A. <br> 37 2490 0005 0000 4500 3180 0289</span>
                 </address>
+                <div>
                 <h4 class="contact__office__header ">godziny otwarcia biura</h4>
                 <ul class="office__days ">
                     <li>Poniedziałek - Piątek 7:00-15:00</li>
                     <li>Sobota - Niedziela <span>nieczynne</span> </li>
                     <li>&#42;Istnieje również możliwość umówienia spotkania poza godzinami otwarcia biura – po wcześniejszym uzgodnieniu terminu.</li>
                 </ul>
-            </div>
+                </div>
+            <div class="fb-page" data-href="https://www.facebook.com/GeoKartSc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/GeoKartSc" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GeoKartSc">Geo-Kart. s.c  Bagiński; Aszurkiewicz; Gosek</a></blockquote></div>
             <div id="map" class="contact__map "></div>
+            </div>
             <div class="contact__info">
                 <p class="contact__desc">Zapraszamy do wsółpracy,
                     <br>prosimy o kontakt telefoniczny bądź mailowy:</p>
@@ -240,6 +254,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8m_PvCfAUkOQ1tb31U3A6mvT5XrCB-Ns&callback=initMap ">
     </script>
     <!-- build:js -->
+    <script src="js/smoothscroll.js"></script>
     <script src="js/script.js "></script>
     <!-- endbuild -->
 </body>
