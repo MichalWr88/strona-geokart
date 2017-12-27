@@ -194,9 +194,9 @@ const removeLoader = () => {
 
     const loadertime = setTimeout(() => {
         loader.parentNode.removeChild(loader);
+    clearTimeout(loadertime);
     }, 5000);
 
-    clearTimeout(loadertime);
 };
 
 const addMenuScroll = () => {
